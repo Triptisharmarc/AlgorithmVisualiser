@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #ca4983;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            text-decoration:underline;
+      }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        select {
+            margin-right: 10px;
+        }
+        
+       
+       .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #8c2247; 
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="container">
+     <form id="task-form">
+        <input type="text" id="description-input" placeholder="Task description" required>
+        <input type="date" id="deadline-input" required>
+        <select id="priority-input" required>
+            <option value="" disabled selected>Select priority</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <input type="text" id="label-input" placeholder="Task label">
+        <button type="submit">Add Task</button>
+     </form>
+    </div>
+    <ul id="task-list">
+        <!-- Tasks will be dynamically added here -->
+    </ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
